@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Pricing Table</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <table class="pricing" role="table" aria-label="Pricing table">
+      <!-- Big title row using colspan -->
+      <caption class="sr-only">Comparison of pricing plans</caption>
+      <thead>
+        <tr class="big-title">
+          <th colspan="4">Choose the plan that fits you</th>
+        </tr>
+
+        <!-- Header row with Plans -->
+        <tr class="plans-row">
+          <th scope="col">Features</th>
+          <th scope="col" class="plan plan-basic">Basic</th>
+          <th scope="col" class="plan plan-pro">Pro <span class="badge">Popular</span></th>
+          <th scope="col" class="plan plan-enterprise">Enterprise</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Price</td>
+          <td class="price">$0 / mo</td>
+          <td class="price">$9 / mo</td>
+          <td class="price">$29 / mo</td>
+        </tr>
+
+        <tr>
+          <td>Storage</td>
+          <td>5 GB</td>
+          <td>50 GB</td>
+          <td>200 GB</td>
+        </tr>
+
+        <tr>
+          <td>Users</td>
+          <td>1</td>
+          <td>5</td>
+          <td>Unlimited</td>
+        </tr>
+
+        <!-- Example using colspan: Basic+Pro share same support detail -->
+        <tr>
+          <td>Support</td>
+          <td colspan="2">Email support (48h)</td>
+          <td>Priority phone & email</td>
+        </tr>
+
+        <!-- Example using rowspan: a feature category spans two rows -->
+        <tr>
+          <td rowspan="2">Advanced features</td>
+          <td>—</td>
+          <td>API access</td>
+          <td>API + SSO</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Custom reports</td>
+          <td>Custom reports + SLA</td>
+        </tr>
+
+        <tr>
+          <td>Free trial</td>
+          <td>7 days</td>
+          <td>14 days</td>
+          <td>30 days</td>
+        </tr>
+
+        <!-- CTA row that uses colspan for the "learn more" across features column -->
+        <tr class="cta-row">
+          <td> </td>
+          <td><button class="btn">Get Basic</button></td>
+          <td><button class="btn btn-primary">Get Pro</button></td>
+          <td><button class="btn">Contact Sales</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
